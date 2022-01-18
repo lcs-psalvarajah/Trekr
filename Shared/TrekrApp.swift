@@ -9,10 +9,14 @@ import SwiftUI
 
 @main
 struct TrekrApp: App {
+    
+    @StateObject var store = LocationStore()
+    
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                LocationDetails(location: Location.example)
+                LocationsList(store: store)
             }
         }
     }
