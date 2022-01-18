@@ -13,6 +13,10 @@
 		C83A831B279705610026BA17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83A83092797055D0026BA17 /* ContentView.swift */; };
 		C83A831C279705610026BA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83A830A279705610026BA17 /* Assets.xcassets */; };
 		C83A831D279705610026BA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83A830A279705610026BA17 /* Assets.xcassets */; };
+		C83A832A279707E60026BA17 /* tips.json in Resources */ = {isa = PBXBuildFile; fileRef = C83A8328279707E50026BA17 /* tips.json */; };
+		C83A832B279707E60026BA17 /* tips.json in Resources */ = {isa = PBXBuildFile; fileRef = C83A8328279707E50026BA17 /* tips.json */; };
+		C83A832C279707E60026BA17 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = C83A8329279707E50026BA17 /* locations.json */; };
+		C83A832D279707E60026BA17 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = C83A8329279707E50026BA17 /* locations.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,8 @@
 		C83A830F279705610026BA17 /* Trekr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trekr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83A8315279705610026BA17 /* Trekr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trekr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83A8317279705610026BA17 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C83A8328279707E50026BA17 /* tips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tips.json; sourceTree = "<group>"; };
+		C83A8329279707E50026BA17 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +60,9 @@
 		C83A83072797055D0026BA17 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C83A83082797055D0026BA17 /* TrekrApp.swift */,
 				C83A83272797068C0026BA17 /* Views */,
 				C83A8326279706790026BA17 /* Model */,
-				C83A83082797055D0026BA17 /* TrekrApp.swift */,
 				C83A830A279705610026BA17 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -82,6 +88,8 @@
 		C83A8326279706790026BA17 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C83A8329279707E50026BA17 /* locations.json */,
+				C83A8328279707E50026BA17 /* tips.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83A831C279705610026BA17 /* Assets.xcassets in Resources */,
+				C83A832C279707E60026BA17 /* locations.json in Resources */,
+				C83A832A279707E60026BA17 /* tips.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +192,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83A831D279705610026BA17 /* Assets.xcassets in Resources */,
+				C83A832D279707E60026BA17 /* locations.json in Resources */,
+				C83A832B279707E60026BA17 /* tips.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
