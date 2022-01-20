@@ -9,12 +9,17 @@ import SwiftUI
 
 struct TipsList: View {
     
-    // This view creates has its own source of truth
-    let tips: [Tip]
+
     
+    // TipStore is a reference type
+    // It's created by this view
+    // It's a source of truth, not a derived value
+    // So, use @StateObject
+    // Establishes an initial connection to the view model for tips
+    @StateObject var dataStore = TipStore()
     
     var body: some View {
-        List(tips, id: \.text, children: \.children ) { tip in
+        List(dataStore.tips, id: \.text, children: \.children ) { tip in
             
             // if there are children on this particular tip...
             if tip.children != nil  {
@@ -28,22 +33,6 @@ struct TipsList: View {
         .navigationTitle("Tips")
         
     }
-    
-    // Initializer pulls tips data from JSON
-    //Populates the array
-    init() {
-        
-        // Get a pointer to the file
-        let url = Bundle.main.url(forResource: "tips", withExtension: "json")!
-        
-        // Load the contents of the JSON file
-        let data = try! Data(contentsOf: url)
-        
-        //Convert the data from the JSON into the array
-        tips = try! JSONDecoder().decode([Tip].self , from: data)
-        
-    }
-    
 }
 
 struct TipsList_Previews: PreviewProvider {
